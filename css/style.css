@@ -1,8 +1,54 @@
+:root {
+    /* Colors */
+    --color-primary: #54BD95;
+    --color-secondary: #A6A6A6;
+    --color-white: #fff;
+    --color-black: #000;
+    --color-light-gray: #F9FAFB;
+    --color-dark-bg: #161C28;
+    --color-form-bg: #222938;
+    --color-shadow: rgba(0, 0, 0, 0.05);
+    --color-modal-overlay: rgba(0, 0, 0, 0.7);
+    --color-modal-bg: #000;
+    --color-button-hover: #ff4d4d;
+
+    /* Font Sizes */
+    --font-size-base: 18px;
+    --font-size-small: 14px;
+    --font-size-large: 24px;
+    --font-size-heading: 2.5rem;
+
+    /* Spacing */
+    --spacing-small: 10px;
+    --spacing-medium: 20px;
+    --spacing-large: 40px;
+
+    /* Border Radius */
+    --border-radius-small: 10px;
+    --border-radius-medium: 15px;
+    --border-radius-large: 20px;
+
+    /* Shadows */
+    --shadow-small: 0px 4px 9px 0px var(--color-shadow);
+    --shadow-medium: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    --shadow-large: 0 10px 30px rgba(0, 0, 0, 0.5);
+
+    /* Transitions */
+    --transition-fast: 0.2s ease-in-out;
+    --transition-medium: 0.3s ease-in-out;
+    --transition-slow: 0.6s ease-out;
+
+    /* Sizes */
+    --icon-size: 25px;
+    --logo-height: 45px;
+    --video-aspect-ratio: 56.25%;
+}
+
+/* General Styles */
 body {
     padding: 0;
     margin: 0;
     font-family: 'Inter', sans-serif;
-    scroll-behavior: smooth;
 }
 
 .header-bg {
@@ -11,30 +57,29 @@ body {
     background-position: center;
 }
 
-.text-gray-color{
-    color: #A6A6A6;
+.text-gray-color {
+    color: var(--color-secondary);
 }
 
-.logo{
-    color: #54BD95;
+.logo {
+    color: var(--color-primary);
 }
 
-.navbar-nav .nav-link{
-    color: #A6A6A6;
+.navbar-nav .nav-link {
+    color: var(--color-secondary);
 }
 
-.navbar-nav .nav-link:hover{
-    color: #000;
+.navbar-nav .nav-link:hover {
+    color: var(--color-black);
 }
 
 /* Smooth transition for offcanvas */
 .offcanvas {
-    transition: transform 0.3s ease-in-out;
+    transition: transform var(--transition-medium);
 }
 
-/* Ensure the offcanvas backdrop has a smooth fade effect */
 .offcanvas-backdrop {
-    transition: opacity 0.3s ease-in-out;
+    transition: opacity var(--transition-medium);
 }
 
 .hero-section-heading::after {
@@ -42,24 +87,24 @@ body {
     display: block;
     width: 75%;
     height: 30px;
-    margin-bottom: 40px;
+    margin-bottom: var(--spacing-large);
 }
 
 .p {
-    font-size: 18px;
+    font-size: var(--font-size-base);
     line-height: 30px;
 }
 
 .btn-main {
-    background-color: #54BD95 !important;
-    color: #fff;
-    font-size: 14px;
-    padding: 10px 20px;
+    background-color: var(--color-primary) !important;
+    color: var(--color-white);
+    font-size: var(--font-size-small);
+    padding: var(--spacing-small) var(--spacing-medium);
 }
 
 /* Custom Modal Styling */
 .custom-modal {
-    display: none; /* Hidden by default */
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -67,74 +112,70 @@ body {
     height: 100%;
     justify-content: center;
     align-items: center;
-    z-index: 1000; /* Ensure it's on top */
+    z-index: 1000;
 }
 
 .custom-modal.show {
-    display: flex; /* Show modal */
+    display: flex;
 }
 
-/* Modal Overlay */
 .custom-modal-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7); 
-    backdrop-filter: blur(10px); /* Blur effect */
+    background-color: var(--color-modal-overlay);
+    backdrop-filter: blur(10px);
     opacity: 0;
-    transition: opacity 0.3s ease-in-out;
+    transition: opacity var(--transition-medium);
 }
 
 .custom-modal.show .custom-modal-overlay {
-    opacity: 1; /* Fade in overlay */
+    opacity: 1;
 }
 
-/* Close Button (Outside the Modal) */
 .custom-modal-close {
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: var(--spacing-medium);
+    right: var(--spacing-medium);
     background: none;
     border: none;
-    color: #fff;
+    color: var(--color-white);
     font-size: 2rem;
     cursor: pointer;
-    z-index: 1002; 
-    transition: color 0.2s ease-in-out;
+    z-index: 1002;
+    transition: color var(--transition-fast);
 }
 
 .custom-modal-close:hover {
-    color: #ff4d4d; 
+    color: var(--color-button-hover);
 }
 
-/* Modal Content (Only Video) */
 .custom-modal-content {
-    background: #000; 
-    border-radius: 15px;
+    background: var(--color-modal-bg);
+    border-radius: var(--border-radius-medium);
     width: 90%;
-    max-width: 800px; 
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    transform: scale(0.9); 
+    max-width: 800px;
+    box-shadow: var(--shadow-large);
+    transform: scale(0.9);
     opacity: 0;
-    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    transition: transform var(--transition-medium), opacity var(--transition-medium);
     position: relative;
     z-index: 1001;
 }
 
 .custom-modal.show .custom-modal-content {
-    transform: scale(1); /* Scale up when modal is shown */
+    transform: scale(1);
     opacity: 1;
 }
 
-/* Video Container */
 .video-container {
     position: relative;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    padding-bottom: var(--video-aspect-ratio);
     height: 0;
     overflow: hidden;
-    border-radius: 15px; /* Match modal border radius */
+    border-radius: var(--border-radius-medium);
 }
 
 .video-container iframe {
@@ -144,26 +185,26 @@ body {
     width: 100%;
     height: 100%;
     border: none;
-    border-radius: 15px; /* Match modal border radius */
+    border-radius: var(--border-radius-medium);
 }
 
 .client-logo {
     width: auto;
-    height: 45px;
-    padding: 5px 20px;
+    height: var(--logo-height);
+    padding: 5px var(--spacing-medium);
 }
 
 .btn.fs-6 {
-    font-size: 14px !important;
+    font-size: var(--font-size-small) !important;
 }
 
 .icon-container {
     width: 40px;
     height: 40px;
-    background-color: #fff;
-    border-radius: 12px;
-    padding: 10px;
-    box-shadow: 0px 4px 9px 0px rgba(0, 0, 0, 0.05);
+    background-color: var(--color-white);
+    border-radius: var(--border-radius-small);
+    padding: var(--spacing-small);
+    box-shadow: var(--shadow-small);
 }
 
 .marquee-container {
@@ -179,8 +220,8 @@ body {
 
 .marquee img {
     display: inline-block;
-    margin: 0 20px; /* Adjust spacing between logos */
-    height: 50px; /* Adjust logo height */
+    margin: 0 var(--spacing-medium);
+    height: 50px;
 }
 
 @keyframes marquee {
@@ -193,15 +234,15 @@ body {
 }
 
 .icons {
-    width: 25px;
-    height: 25px;
+    width: var(--icon-size);
+    height: var(--icon-size);
 }
 
 .bg-light-green {
     background-color: #F9F8FE;
 }
 
-.details-bgColor{
+.details-bgColor {
     background-image: url(../images/mainSectionBG.svg);
     background-size: 100%;
 }
@@ -215,150 +256,137 @@ body {
 .benifitsList>li {
     background: url('../images/icons/list_check.svg') no-repeat;
     padding-left: 40px;
-    margin: 20px 0px;
-    font-size: 18px;
+    margin: var(--spacing-medium) 0;
+    font-size: var(--font-size-base);
     line-height: 25px;
 }
 
-/* Existing Styles */
 .planTab {
     display: inline-flex;
-    border-radius: 10px;
-    background-color: #fff;
-    box-shadow: 0px 4px 9px 0px rgba(0, 0, 0, 0.05);
+    border-radius: var(--border-radius-medium);
+    background-color: var(--color-white);
+    box-shadow: var(--shadow-small);
     padding: 5px;
-    position: relative; /* Required for the moving underline */
+    position: relative;
 }
 
 .nav-pills>.nav-item>.nav-link {
-    color: #000;
-    padding: 8px 25px;
-    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    color: var(--color-black);
+    padding: var(--spacing-small) var(--spacing-medium);
+    transition: color var(--transition-medium), background-color var(--transition-medium);
 }
 
 .nav-pills>.nav-item>.nav-link.active {
-    background-color: #54BD95 !important;
-    color: #fff;
+    background-color: var(--color-primary) !important;
+    color: var(--color-white);
 }
 
-
-/* Adjust underline position based on active tab */
-.planTab[data-active-tab="monthly"]::after {
-    transform: translateX(0);
-}
-
-.planTab[data-active-tab="yearly"]::after {
-    transform: translateX(100%);
-}
-
-/* Plan Cards */
 .planCards {
-    border-radius: 20px;
-    background: #fff;
-    box-shadow: 0px 4px 9px 0px rgba(0, 0, 0, 0.05);
-    padding: 10px;
-    margin-top: 15px;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border-radius: var(--border-radius-large);
+    background: var(--color-white);
+    box-shadow: var(--shadow-small);
+    padding: var(--spacing-small);
+    margin-top: var(--spacing-medium);
+    transition: transform var(--transition-medium), box-shadow var(--transition-medium);
 }
 
 .planCards:hover {
-    transform: scale(1.05); /* Zoom-in effect */
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1); /* Enhanced shadow on hover */
+    transform: scale(1.05);
+    box-shadow: var(--shadow-medium);
 }
 
 .planCards>.planCardinBG {
-    border-radius: 15px;
-    background-color: #F9FAFB;
-    padding: 10px 20px;
+    border-radius: var(--border-radius-medium);
+    background-color: var(--color-light-gray);
+    padding: var(--spacing-small) var(--spacing-medium);
 }
 
 .planCards>.planCardinBG>button {
-    background-color: #fff;
-    border-radius: 15px;
-    color: #54BD95;
-    padding: 15px;
-    margin-bottom: 10px;
-    box-shadow: 0px 4px 9px 0px rgba(0, 0, 0, 0.05);
-    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    background-color: var(--color-white);
+    border-radius: var(--border-radius-medium);
+    color: var(--color-primary);
+    padding: var(--spacing-medium);
+    margin-bottom: var(--spacing-small);
+    box-shadow: var(--shadow-small);
+    transition: background-color var(--transition-medium), color var(--transition-medium);
 }
 
 .planCards.active {
     background-image: url('../images/cardBG.svg');
     background-size: cover;
-    color: #fff;
+    color: var(--color-white);
 }
 
 .planCards.active>.planCardinBG {
-    background-color: #fff;
-    color: #000;
+    background-color: var(--color-white);
+    color: var(--color-black);
 }
 
 .planCards.active>.planCardinBG>button {
-    color: #fff;
-    background-color: #54BD95;
+    color: var(--color-white);
+    background-color: var(--color-primary);
 }
 
-.footer-bg{
-    background-color: #161C28;
-    color: #fff;
+.footer-bg {
+    background-color: var(--color-dark-bg);
+    color: var(--color-white);
 }
 
-    /* Typewriter animation */
-    .typewriter::after {
-        content: "|";
-        animation: blink 0.7s infinite;
-    }
+.typewriter::after {
+    content: "|";
+    animation: blink 0.7s infinite;
+}
 
-    @keyframes blink {
-        50% { opacity: 0; }
+@keyframes blink {
+    50% {
+        opacity: 0;
     }
+}
 
-    /* Fade-in and bounce animation for stars */
-    .review-stars .star {
+.review-stars .star {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp var(--transition-slow) forwards;
+}
+
+@keyframes fadeInUp {
+    from {
         opacity: 0;
         transform: translateY(20px);
-        animation: fadeInUp 0.6s ease-out forwards;
     }
-
-    @keyframes fadeInUp {
-        from {
-            opacity: 0;
-            transform: translateY(20px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
+}
 
-
-.review>.reviewImg>img{
+.review>.reviewImg>img {
     width: 50px;
     height: 50px;
-    margin-right: 10px;
+    margin-right: var(--spacing-small);
 }
 
-.formBox{
-    background-color: #222938;
-    border-radius: 20px;
-    padding: 50px;
+.formBox {
+    background-color: var(--color-form-bg);
+    border-radius: var(--border-radius-large);
+    padding: var(--spacing-large);
 }
 
-.inputwithButton{
+.inputwithButton {
     width: 75%;
 }
 
-.inputwithButton>input{
-    border: 2px solid #A6A6A6;
+.inputwithButton>input {
+    border: 2px solid var(--color-secondary);
     height: 50px;
     background: transparent;
 }
 
-.inputwithButton>input::placeholder{
-    color: #A6A6A6;
+.inputwithButton>input::placeholder {
+    color: var(--color-secondary);
 }
 
-.inputwithButton>button{
+.inputwithButton>button {
     position: absolute;
     top: 50%;
     right: 5px;
@@ -366,33 +394,33 @@ body {
     padding: 8px;
 }
 
-.inputwithButton>button>img{
-    width: 20px;
-    height: 20px;
+.inputwithButton>button>img {
+    width: var(--icon-size);
+    height: var(--icon-size);
 }
 
-.avatar-card{
-    background-color: #fff;
-    border-radius: 10px;
+.avatar-card {
+    background-color: var(--color-white);
+    border-radius: var(--border-radius-small);
     width: 200px;
-    box-shadow: 0px 4px 9px 0px rgba(0, 0, 0, 0.05);
+    box-shadow: var(--shadow-small);
 }
 
-.avatar-card .card-text{
+.avatar-card .card-text {
     font-size: 12px;
 }
 
-.avatar-card .card-amt{
-    font-size: 14px;
+.avatar-card .card-amt {
+    font-size: var(--font-size-small);
 }
 
-.avatar-card .card-button button{
+.avatar-card .card-button button {
     font-size: 12px;
-    background-color: #54BD95;
-    color: #fff;
+    background-color: var(--color-primary);
+    color: var(--color-white);
 }
 
-.heroSectionImg{
+.heroSectionImg {
     width: 70%;
 }
 
@@ -405,52 +433,52 @@ body {
         line-height: 22px;
     }
 
-    .formBox{
-        padding: 25px;
+    .formBox {
+        padding: var(--spacing-medium);
     }
 
-    .inputwithButton{
+    .inputwithButton {
         width: 100%;
     }
 
-    .text-center-md{
+    .text-center-md {
         text-align: center;
     }
 
-    .hero-section-heading::after{
+    .hero-section-heading::after {
         margin-left: 50%;
         transform: translateX(-50%);
     }
 
-    .mx-auto-md{
+    .mx-auto-md {
         margin-left: auto;
         margin-right: auto;
     }
 
-    .justify-content-center-md{
+    .justify-content-center-md {
         justify-content: center;
     }
 
-    .flex-wrap-md{
+    .flex-wrap-md {
         flex-wrap: wrap;
     }
 }
 
 @media (max-width: 576px) {
-    .review>.reviewImg>img{
+    .review>.reviewImg>img {
         width: 40px;
         height: 40px;
     }
 
-    .heroSectionImg{
+    .heroSectionImg {
         width: 80%;
     }
 
-    .avatar-card{
+    .avatar-card {
         width: 160px;
     }
 
-    .creditCardImg{
+    .creditCardImg {
         width: 150px;
         height: auto;
     }
