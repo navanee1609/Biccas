@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Biccas</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+      rel="stylesheet"
+    />
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="header-bg pb-5 overflow-x-hidden">
+      <header class="pb-3 mb-4">
+        <nav class="navbar navbar-expand-lg">
+          <div class="container">
+            <!-- Logo -->
+            <a
+              href="#"
+              class="text-decoration-none display-5 lh-sm fw-bold logo"
+              >Biccas</a
+            >
+
+            <!-- Offcanvas Toggle Button -->
+            <button
+              class="navbar-toggler border-0"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasNavbar"
+              aria-controls="offcanvasNavbar"
+              aria-label="Toggle navigation"
+            >
+              <img src="./images/icons/menu_bar.svg" alt="Menu" />
+            </button>
+
+            <!-- Offcanvas Menu -->
+            <div
+              class="offcanvas offcanvas-end"
+              tabindex="-1"
+              id="offcanvasNavbar"
+              aria-labelledby="offcanvasNavbarLabel"
+            >
+              <div class="offcanvas-header">
+                <a
+                  href="#"
+                  class="text-decoration-none display-5 lh-sm fw-bold logo offcanvas-title"
+                  id="offcanvasNavbarLabel"
+                  >Biccas</a
+                >
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="offcanvas-body">
+                <!-- Nav Links -->
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#"
+                      >Home</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Product</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">FAQ</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Blog</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">About Us</a>
+                  </li>
+                </ul>
+
+                <!-- Login and Sign Up Buttons -->
+                <form class="d-flex" role="search">
+                  <button class="btn text-gray-color">Login</button>
+                  <button class="btn btn-main p-2">Sign Up</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <div class="container pb-3 mb-4">
+        <div class="row">
+          <div class="col-md-6 mt-5 text-center-md">
+            <h1 class="display-4 lh-sm fw-bold hero-section-heading">
+              We&#39;re here to Increase your Productivity
+            </h1>
+            <p class="p">
+              Let's make your work more organize and easily using the Taskio
+              Dashboard with many of the latest featuresin managing work every
+              day.
+            </p>
+            <button class="btn btn-main rounded-pill" type="button">
+              Try free trial
+            </button>
+            <!-- View Demo Button -->
+            <!-- View Demo Button -->
+            <button class="btn fs-6" type="button" id="viewDemoBtn">
+              <img src="./images/icons/play.svg" class="icons" alt="" />
+              View Demo
+            </button>
+
+            <!-- Custom Video Modal -->
+            <div class="custom-modal" id="customModal">
+              <!-- Modal Overlay -->
+              <div class="custom-modal-overlay" id="modalOverlay"></div>
+
+              <!-- Close Button (Outside the Modal) -->
+              <button
+                type="button"
+                class="custom-modal-close"
+                id="closeModalBtn"
+              >
+                &times;
+              </button>
+
+              <!-- Modal Content (Only Video) -->
+              <div class="custom-modal-content">
+                <!-- Embedded YouTube Video -->
+                <div class="video-container">
+                  <iframe
+                    id="youtubeVideo"
+                    src="https://www.youtube.com/embed/VIDEO_ID?enablejsapi=1"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 text-end position-relative mt-5">
+            <img src="./images/heroSectionImg.png" class="heroSectionImg" />
+            <div
+              class="avatar-card p-2 position-absolute"
+              style="top: 5%; left: 5%"
+            >
+              <div class="d-flex align-items-center justify-content-between">
+                <div class="fs-6 priceDetails">
+                  <p class="card-text text-gray-color mb-2 text-start">
+                    Enter amount
+                  </p>
+                  <p class="card-amt mb-0 fw-bold text-start">$450.00</p>
+                </div>
+                <div class="card-button">
+                  <button class="btn rounded-pill px-3 py-1">Send</button>
+                </div>
+              </div>
+              <hr class="mt-1 mb-0" />
+            </div>
+            <div
+              class="avatar-card p-2 position-absolute"
+              style="width: 125px; bottom: 10%; left: 15%"
+            >
+              <div class="d-flex align-items-end justify-content-between">
+                <div class="fs-6 priceDetails">
+                  <p class="card-text text-gray-color mb-2 text-start">
+                    Total Income
+                  </p>
+                  <p class="card-amt mb-0 fw-bold text-start">$450.00</p>
+                </div>
+                <div class="card-button">
+                  <img src="./images/icons/bar_graphy.svg" alt="" />
+                </div>
+              </div>
+            </div>
+            <img
+              src="./images/icons/checkwithBg.svg"
+              class="position-absolute"
+              style="top: 30%; left: 20%"
+              alt=""
+            />
+            <img
+              src="./images/icons/DBwithbg.svg"
+              class="position-absolute"
+              style="top: 10%; right: -2%"
+              alt=""
+            />
+            <img
+              src="./images/icons/creditCard.svg"
+              class="position-absolute creditCardImg"
+              style="bottom: 5%; right: -15%"
+              alt=""
+            />
+            <img
+              src="./images/icons/msgwithBG.svg"
+              class="position-absolute"
+              style="bottom: -8%; left: 65%"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="container mt-5 py-5">
+        <h4 class="fs-2 fw-bold text-center">
+          More than 25,000 teams use Collabs
+        </h4>
+        <div class="marquee-container mt-4">
+          <div class="marquee">
+            <img src="./images/unsplash.png" class="client-logo" alt="" />
+            <img src="./images/notion.png" class="client-logo" alt="" />
+            <img src="./images/intercom.png" class="client-logo" alt="" />
+            <img src="./images/descript.png" class="client-logo" alt="" />
+            <img src="./images/grammarly.png" class="client-logo" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="bg-light-green">
+      <div class="container py-5">
+        <div class="row">
+          <div class="col-md-7">
+            <div class="row">
+              <div class="col-12 mt-3 text-center-md">
+                <h4 class="display-5 lh-sm fw-bold pe-2">
+                  How we support our partner all over the world
+                </h4>
+                <p class="p mt-4 text-gray-color">
+                  SaaS has become a common delivery model for many business
+                  applications, including office software, messaging software,
+                  payroll processing software, DBMS software, and management
+                  software.
+                </p>
+              </div>
+
+              <!-- Review 1 -->
+              <div class="col-6 mt-4 mb-5 text-center-md">
+                <div
+                  class="d-flex flex-wrap justify-content-center-md review-stars"
+                  data-delay="200"
+                >
+                  <img
+                    src="./images/icons/full_star.svg"
+                    class="icons star"
+                    alt=""
+                  />
+                  <img
+                    src="./images/icons/full_star.svg"
+                    class="icons star"
+                    alt=""
+                  />
+                  <img
+                    src="./images/icons/full_star.svg"
+                    class="icons star"
+                    alt=""
+                  />
+                  <img
+                    src="./images/icons/full_star.svg"
+                    class="icons star"
+                    alt=""
+                  />
+                  <img
+                    src="./images/icons/full_star.svg"
+                    class="icons star"
+                    alt=""
+                  />
+                </div>
+                <p class="p my-2 typewriter" data-text="4.8 / 5 rating"></p>
+                <p class="p fw-bold text-gray-color">Databricks</p>
+              </div>
+
+              <!-- Review 2 -->
+              <div class="col-6 mt-4 mb-5 text-center-md">
+                <div
+                  class="d-flex flex-wrap justify-content-center-md review-stars"
+                  data-delay="400"
+                >
+                  <img
+                    src="./images/icons/full_star.svg"
+                    class="icons star"
+                    alt=""
+                  />
+                  <img
+                    src="./images/icons/full_star.svg"
+                    class="icons star"
+                    alt=""
+                  />
+                  <img
+                    src="./images/icons/full_star.svg"
+                    class="icons star"
+                    alt=""
+                  />
+                  <img
+                    src="./images/icons/full_star.svg"
+                    class="icons star"
+                    alt=""
+                  />
+                  <img
+                    src="./images/icons/no_star.svg"
+                    class="icons star"
+                    alt=""
+                  />
+                </div>
+                <p class="p my-2 typewriter" data-text="4.9 / 5 rating"></p>
+                <p class="p fw-bold text-gray-color">Chainalysis</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md">
+            <div class="d-flex my-3">
+              <div class="flex-shrink-0">
+                <img
+                  src="./images/icons/publish.svg"
+                  class="icon-container"
+                  alt=""
+                />
+              </div>
+              <div class="flex-grow-1 ms-3">
+                <p class="fs-4 fw-bold mb-2">Publishing</p>
+                <p class="p text-gray-color">
+                  Plan, collaborate, and publishing your contetn that drivees
+                  meaningful engagement and growth for your barnd
+                </p>
+              </div>
+            </div>
+            <div class="d-flex my-3">
+              <div class="flex-shrink-0">
+                <img
+                  src="./images/icons/analytics.svg"
+                  class="icon-container"
+                  alt=""
+                />
+              </div>
+              <div class="flex-grow-1 ms-3">
+                <p class="fs-4 fw-bold mb-2">Analytics</p>
+                <p class="p text-gray-color">
+                  Analyze your performance and create goegeous report
+                </p>
+              </div>
+            </div>
+            <div class="d-flex my-3">
+              <div class="flex-shrink-0">
+                <img
+                  src="./images/icons/engagement.svg"
+                  class="icon-container"
+                  alt=""
+                />
+              </div>
+              <div class="flex-grow-1 ms-3">
+                <p class="fs-4 fw-bold mb-2">Engagement</p>
+                <p class="p text-gray-color">
+                  Quiuckly navigate you anda engage with your adience
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="details-bgColor overflow-x-hidden">
+      <div class="container py-5">
+        <div class="row align-items-center justify-content-center text-center">
+          <!-- Heading Column -->
+          <div class="col-12">
+            <h4 class="display-5 lh-sm fw-bold">Our Features You Can Get</h4>
+          </div>
+
+          <!-- Text and Button Column -->
+          <div class="col-12">
+            <div class="d-flex flex-column align-items-center">
+              <!-- Description -->
+              <div class="mb-3">
+                <p class="p text-gray-color">
+                  We offer a variety of interesting features that you can help
+                  increase your productivity at work and manage your project
+                  easily.
+                </p>
+              </div>
+
+              <!-- Button -->
+              <div>
+                <button
+                  class="btn btn-main rounded-pill"
+                  type="button"
+                  id="getStarted"
+                >
+                  Get Started
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row position-relative py-5">
+          <div class="col-md-6">
+            <h4 class="display-5 lh-sm fw-bold text-center-md">
+              What Benifit Will You Get
+            </h4>
+            <ul class="benifitsList">
+              <li class="p">Free Consulting With Experet Saving Money</li>
+              <li class="p">Online Banking</li>
+              <li class="p">Investment Report Every Month</li>
+              <li class="p">Saving Money For The Future</li>
+              <li class="p">Online Transection</li>
+            </ul>
+          </div>
+          <div class="col-md-6 text-end position-relative">
+            <img src="./images/laptop_img.png" class="heroSectionImg" />
+            <div
+              class="avatar-card p-2 position-absolute"
+              style="width: 125px; top: 30%; right: -5%"
+            >
+              <div class="d-flex align-items-end justify-content-between">
+                <div class="fs-6 priceDetails">
+                  <p class="card-text text-gray-color mb-2 text-start">
+                    Total Income
+                  </p>
+                  <p class="card-amt mb-0 fw-bold text-start">$450.00</p>
+                </div>
+                <div class="card-button">
+                  <img src="./images/icons/bar_graphy.svg" alt="" />
+                </div>
+              </div>
+            </div>
+            <div
+              class="avatar-card p-2 position-absolute"
+              style="width: 200px; bottom: -5%; left: 10%"
+            >
+              <div class="d-flex align-items-center">
+                <img src="./images/icons/circlewithcheck.svg" alt="" />
+                <p class="card-text mb-0 ms-1 text-start">
+                  Money Transfer Succesfull
+                </p>
+              </div>
+            </div>
+            <div
+              class="avatar-card p-2 position-absolute"
+              style="width: 225px; top: 5%; left: 5%"
+            >
+              <div class="d-flex align-items-center justify-content-evenly">
+                <img
+                  src="./images/user4.png"
+                  class="rounded-circle"
+                  style="width: 40px; height: 40px"
+                  alt=""
+                />
+                <div class="fs-6 priceDetails">
+                  <p class="card-amt mb-2 fw-bold text-start">Amanda Young</p>
+                  <p class="card-text text-gray-color mb-0 text-start">
+                    Expert Saving Money
+                  </p>
+                </div>
+                <img
+                  src="./images/icons/textmsgBG.svg"
+                  style="width: 30px; height: 30px"
+                  alt=""
+                />
+              </div>
+            </div>
+            <img
+              src="./images/icons/picturewithBG.svg"
+              class="position-absolute"
+              style="top: 35%; left: 10%"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="py-5">
+          <h4 class="display-5 lh-sm fw-bold text-center">
+            Choose Plan <br />
+            That&#39;s Right For You
+          </h4>
+          <p class="p mt-4 text-center text-gray-color">
+            Choose plan that works best for you, feel free to contact us
+          </p>
+          <div class="d-flex justify-content-center">
+            <ul class="nav nav-pills planTab" id="planTab">
+              <li class="nav-item">
+                <a class="nav-link" href="#" data-plan="monthly"
+                  >Bill Monthly</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#" data-plan="yearly"
+                  >Bill Yearly</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="row align-items-center py-5">
+            <!-- Free Plan -->
+            <div class="col-md-6 col-lg-4 mb-4 mb-md-0">
+              <div class="planCards">
+                <div class="text-center">
+                  <p class="fs-4 fw-bold mt-3 mb-1 text-center">Free</p>
+                  <p class="p text-center">
+                    Have a go and test your superpowers
+                  </p>
+                  <p class="fs-1 fw-bold">
+                    <sup class="fs-5 text-gray-color">$</sup
+                    ><span class="price">0</span>
+                  </p>
+                </div>
+                <div class="planCardinBG">
+                  <ul class="benifitsList">
+                    <li class="p">2 Users</li>
+                    <li class="p">2 Files</li>
+                    <li class="p">Public Share & Comments</li>
+                    <li class="p">Chat Support</li>
+                    <li class="p">New income apps</li>
+                  </ul>
+                  <button class="btn w-100" type="button">
+                    Signup for free
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Pro Plan -->
+            <div class="col-md-6 col-lg-4 mb-4 mb-md-0">
+              <div class="planCards active">
+                <div class="text-center">
+                  <p class="fs-4 fw-bold mt-3 mb-1">Pro</p>
+                  <p class="p">
+                    Experiment the power of infinite possibilities
+                  </p>
+                  <p class="fs-1 fw-bold">
+                    <sup class="fs-5">$</sup><span class="price">8</span>
+                  </p>
+                  <p
+                    class="btn save-badge"
+                    style="background-color: #85dab9; color: #fff"
+                  >
+                    Save $50 a year
+                  </p>
+                </div>
+                <div class="planCardinBG">
+                  <ul class="benifitsList">
+                    <li class="p">4 Users</li>
+                    <li class="p">All apps</li>
+                    <li class="p">Unlimited editable exports</li>
+                    <li class="p">Folders and collaboration</li>
+                    <li class="p">All incoming apps</li>
+                  </ul>
+                  <button class="btn w-100" type="button">Go to pro</button>
+                </div>
+              </div>
+            </div>
+            <!-- Business Plan -->
+            <div class="col-md-12 col-lg-4 d-flex justify-content-center">
+              <div class="planCards">
+                <div class="text-center">
+                  <p class="fs-4 fw-bold mt-3 mb-1 text-center">Business</p>
+                  <p class="p text-center">
+                    Unveil new superpowers and join the Design Leaque
+                  </p>
+                  <p class="fs-1 fw-bold">
+                    <sup class="fs-5 text-gray-color">$</sup
+                    ><span class="price">16</span>
+                  </p>
+                </div>
+                <div class="planCardinBG">
+                  <ul class="benifitsList">
+                    <li class="p">All the features of pro plan</li>
+                    <li class="p">Account success Manager</li>
+                    <li class="p">Single Sign-On (SSO)</li>
+                    <li class="p">Co-conception pogram</li>
+                    <li class="p">Collaboration-Soon</li>
+                  </ul>
+                  <button class="btn w-100" type="button">
+                    Go to Business
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="pt-3 footer-bg">
+      <div class="container">
+        <!-- First Row: Review and Form -->
+        <div class="row py-5">
+          <!-- Review Section -->
+          <div class="col-12 col-md-12 col-lg-6 mt-5 text-center text-lg-start">
+            <h4 class="display-5 lh-sm fw-bold">
+              People are Saying About DoWhith
+            </h4>
+            <p class="p mt-4 text-gray-color">
+              Everything you need to accept to payment and grow your money of
+              manage anywhere on planet
+            </p>
+            <div class="review">
+              <img
+                src="./images/icons/quotes.svg"
+                class="d-block mx-auto mx-lg-0"
+              />
+              <p class="p mt-4 text-gray-color">
+                I am very helped by this E-wallet application , my days are very
+                easy to use this application and its very helpful in my life ,
+                even I can pay a short time 😍
+              </p>
+              <p class="p mt-5 text-gray-color">_ Aria Zinanrio</p>
+              <div
+                class="d-flex flex-wrap reviewImg justify-content-center justify-content-lg-start"
+              >
+                <img src="./images/user1.png" alt="" />
+                <img src="./images/user2.png" alt="" />
+                <img src="./images/user3.png" alt="" />
+                <img src="./images/user4.png" alt="" />
+                <img src="./images/icons/light_play.svg" alt="" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Form Section -->
+          <div class="col-12 col-md-12 col-lg-6 mt-5">
+            <div class="formBox" id="contact">
+              <img
+                src="./images/icons/formLogo.svg"
+                class="d-block mx-auto"
+                alt=""
+              />
+              <p class="fs-4 fw-bold mt-3 mb-1 text-center">Get Started</p>
+              <form>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label"
+                    >Email</label
+                  >
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="exampleInputEmail1"
+                    placeholder="Enter your email"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="exampleFormControlTextarea1" class="form-label"
+                    >Message</label
+                  >
+                  <textarea
+                    class="form-control"
+                    id="exampleFormControlTextarea1"
+                    rows="3"
+                    placeholder="What are you say ?"
+                  ></textarea>
+                </div>
+                <button type="submit" class="btn btn-main w-100">
+                  Request Demo
+                </button>
+                <p class="text-end">
+                  <span class="text-gray-color">or</span> Start Free Trial
+                </p>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- Second Row: Logo, Input, and Links -->
+        <div class="row pt-5 pb-2">
+          <!-- Logo and Email Input -->
+          <div class="col-12 col-md-12 col-lg-6">
+            <h4 class="display-5 lh-sm fw-bold logo">Biccas</h4>
+            <p class="p text-gray-color">Get started now try our product</p>
+            <form>
+              <div class="position-relative inputwithButton">
+                <input
+                  type="email"
+                  class="form-control rounded-pill"
+                  placeholder="Enter your email here"
+                />
+                <button class="btn btn-main rounded-circle" type="button">
+                  <img src="./images/icons/arrow.svg" alt="" />
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Links Section -->
+          <div class="col-12 col-md-12 col-lg-6">
+            <div class="row">
+              <!-- Support Links -->
+              <div class="col-12 col-md-4 mt-4">
+                <p class="p">Support</p>
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a
+                      class="nav-link px-0 py-1 text-gray-color"
+                      aria-current="page"
+                      href="#"
+                      >Help centre</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link px-0 py-1 text-gray-color"
+                      aria-current="page"
+                      href="#"
+                      >Account information</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link px-0 py-1 text-gray-color"
+                      aria-current="page"
+                      href="#"
+                      >About</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link px-0 py-1 text-gray-color"
+                      aria-current="page"
+                      href="#"
+                      >Contact us</a
+                    >
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Help and Solution Links -->
+              <div class="col-12 col-md-4 mt-4">
+                <p class="p">Help and Solution</p>
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a
+                      class="nav-link px-0 py-1 text-gray-color"
+                      aria-current="page"
+                      href="#"
+                      >Talk to support</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link px-0 py-1 text-gray-color"
+                      aria-current="page"
+                      href="#"
+                      >Support docs</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link px-0 py-1 text-gray-color"
+                      aria-current="page"
+                      href="#"
+                      >System status</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link px-0 py-1 text-gray-color"
+                      aria-current="page"
+                      href="#"
+                      >Covid responde</a
+                    >
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Product Links -->
+              <div class="col-12 col-md-4 mt-4">
+                <p class="p">Product</p>
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a
+                      class="nav-link px-0 py-1 text-gray-color"
+                      aria-current="page"
+                      href="#"
+                      >Update</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link px-0 py-1 text-gray-color"
+                      aria-current="page"
+                      href="#"
+                      >Security</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link px-0 py-1 text-gray-color"
+                      aria-current="page"
+                      href="#"
+                      >Beta test</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link px-0 py-1 text-gray-color"
+                      aria-current="page"
+                      href="#"
+                      >Pricing product</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Third Row: Copyright and Links -->
+        <div class="d-flex flex-wrap justify-content-between mt-5">
+          <p>&copy; Biccas Inc. Copyright and rights reserved</p>
+          <div class="d-flex">
+            <p><a href="#" class="nav-link">Terms and Condtions</a></p>
+            <p><a href="#" class="nav-link ms-3">Privacy Policy</a></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="app.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
