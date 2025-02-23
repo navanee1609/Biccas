@@ -183,3 +183,23 @@ document.addEventListener("DOMContentLoaded", function () {
 document.getElementById("getStarted").addEventListener("click", function () {
     document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
 });
+
+
+// navigate 
+document.addEventListener('DOMContentLoaded', function () {
+    const getStartedButton = document.getElementById('getStarted');
+
+    // Smooth scroll to the contact section
+    if (getStartedButton) {
+        getStartedButton.addEventListener('click', function (e) {
+            e.preventDefault(); // Prevent default button behavior
+            const contactSection = document.getElementById('contact');
+            if (contactSection) {
+                contactSection.scrollIntoView({
+                    behavior: 'smooth', // Smooth scroll
+                    block: 'start' // Align to the top of the section
+                });
+            }
+        });
+    }
+});
